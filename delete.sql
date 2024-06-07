@@ -1,0 +1,111 @@
+DROP INDEX prod_name_idx;
+DROP INDEX end_day_idx;
+DROP INDEX host_idx;
+
+rem 메인키 제거
+ALTER  TABLE  usr
+    DROP  PRIMARY  KEY  CASCADE;
+ALTER TABLE general_usr 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE designer_usr
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE post
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE pt_category 	 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE designer_page 	 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE news 	 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE competition 	 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE sponsor 	 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE recriutment 	 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE par_brand 	 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE interest_field 	 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE normal_par_f 	 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE delivery_info 	 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE payment_type 	 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE purchase_state 	 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE put_in_cart 	 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE request 	 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE purchase_cancel
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE showroom
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE reservation_time
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE reserve
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE product
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE design	 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE post_comment 
+    DROP PRIMARY KEY CASCADE;
+ALTER TABLE prod_purchase
+    DROP PRIMARY KEY CASCADE;
+
+rem 테이블 제거
+DROP TABLE follow PURGE;
+DROP TABLE usr PURGE;
+DROP TABLE general_usr PURGE;
+DROP TABLE designer_usr PURGE;
+DROP TABLE show_grade PURGE;
+DROP TABLE post PURGE;
+DROP TABLE pt_category PURGE;
+DROP TABLE post_writing PURGE;
+DROP TABLE post_comment PURGE;
+DROP TABLE post_like_in PURGE;
+DROP TABLE design_sign_up PURGE;
+DROP TABLE design_buy PURGE;
+DROP TABLE design_like_in PURGE;
+DROP TABLE showroom PURGE;
+DROP TABLE designer_page PURGE;
+DROP TABLE news PURGE;
+DROP TABLE news_like PURGE;
+DROP TABLE news_register PURGE;
+DROP TABLE news_write PURGE;
+DROP TABLE keyword PURGE;
+DROP TABLE product_like PURGE;
+DROP TABLE review_write PURGE;
+DROP TABLE competition PURGE;
+DROP TABLE sponsor PURGE;
+DROP TABLE recriutment PURGE;
+DROP TABLE par_brand PURGE;
+DROP TABLE interest_field PURGE;
+DROP TABLE normal_par_f PURGE;
+DROP TABLE delivery_info PURGE;
+DROP TABLE payment_type PURGE;
+DROP TABLE purchase_state PURGE;
+DROP TABLE put_in_cart PURGE;
+DROP TABLE request PURGE;
+DROP TABLE purchase_cancel PURGE;
+DROP TABLE reserve PURGE;
+DROP TABLE design PURGE;
+DROP TABLE news_comment_write PURGE;
+DROP TABLE product PURGE;
+DROP TABLE booth PURGE;
+DROP TABLE prod_purchase PURGE;
+DROP TABLE like_fs PURGE;
+DROP TABLE belong_team PURGE;
+DROP TABLE reg_for_f  PURGE;
+DROP TABLE like_comp PURGE;
+DROP TABLE write_recruit PURGE;
+DROP TABLE upload_recruit PURGE;
+DROP TABLE like_recruit  PURGE;
+DROP TABLE designer_team PURGE;
+DROP TABLE app_join PURGE;
+DROP TABLE fashinshow PURGE;
+DROP TABLE reservation_time PURGE;
+SELECT * FROM tab;
